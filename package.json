@@ -2,12 +2,12 @@
   "name": "ie-grid-mixins",
   "version": "1.0.0",
   "description": "A collection of mixins to write IE compliant grid styling in Styled Components",
-  "main": "index.js",
+  "main": "lib/index.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,8 @@
   "homepage": "https://github.com/Kvalifik/ie-grid-mixins#readme",
   "peerDependencies": {
     "styled-components": "4.x"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.0"
   }
 }
