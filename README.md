@@ -9,7 +9,7 @@ A collection of mixins to write IE compliant grid styling in Styled Components
 
 You can actually just call the function from anywhere, but I would suggest that you reference it in your theme to make it available everywhere. Also you should use it with **styled-components**.
 
-**Include it in your theme**
+### Include it in your theme
 
 ```js
 import ieGridMixin from 'ie-grid-mixins'
@@ -21,7 +21,7 @@ export const theme = {
 }
 ```
 
-**Use the function**
+### Use the function
 
 ```js
 const MyComponent = styled.div`
@@ -46,7 +46,7 @@ Example expressions:
 `grid-template-columns: repeat(3, 1fr)`
 
 
-**Declare multiple rules at once**
+### Declare multiple rules at once
 
 If you want to, you can delare multiple rules inside an array by calling `mixin.all`.
 
