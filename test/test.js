@@ -107,7 +107,7 @@ describe('grid-template-columns', function () {
   })
 
   it('should support repeat function', function () {
-    assert(mixin('grid-template-columns: repeat(12, 1fr 20px) 1fr', [
+    equal(mixin('grid-template-columns: repeat(12, 1fr 20px) 1fr', [
       ['-ms-grid-columns:', ';grid-template-columns', ';'],
       '(1fr 20px)[12] 1fr',
       'repeat(12, 1fr 20px) 1fr'
@@ -115,7 +115,7 @@ describe('grid-template-columns', function () {
   })
 
   it('should support minmax function', function () {
-    assert(mixin('grid-template-columns: minmax(200px, 500px)'), [
+    equal(mixin('grid-template-columns: minmax(200px, 500px)'), [
       ['-ms-grid-columns:', ';grid-template-columns:', ';'],
       'minmax(200px, 500px)',
       'minmax(200px, 500px)'
@@ -123,7 +123,7 @@ describe('grid-template-columns', function () {
   })
 
   it('should support minmax function inside repeat', function () {
-    assert(mixin('grid-template-columns: repeat(12, minmax(200px, 1fr))'), [
+    equal(mixin('grid-template-columns: repeat(12, minmax(200px, 1fr))'), [
       ['-ms-grid-columns:', ';grid-template-columns:', ';'],
       '(minmax(200px 500px))[12]',
       'repeat(12, minmax(200px, 1fr))'
@@ -161,7 +161,7 @@ describe('grid-template-rows', function () {
   })
 
   it('should support repeat function', function () {
-    assert(mixin('grid-template-rows: repeat(12, 1fr 20px) 1fr', [
+    equal(mixin('grid-template-rows: repeat(12, 1fr 20px) 1fr', [
       ['-ms-grid-rows:', ';grid-template-rows', ';'],
       '(1fr 20px)[12] 1fr',
       'repeat(12, 1fr 20px) 1fr'
@@ -169,7 +169,7 @@ describe('grid-template-rows', function () {
   })
 
   it('should support minmax function', function () {
-    assert(mixin('grid-template-rows: minmax(200px, 500px)'), [
+    equal(mixin('grid-template-rows: minmax(200px, 500px)'), [
       ['-ms-grid-rows:', ';grid-template-rows:', ';'],
       'minmax(200px, 500px)',
       'minmax(200px, 500px)'
@@ -177,7 +177,7 @@ describe('grid-template-rows', function () {
   })
 
   it('should support minmax function inside repeat', function () {
-    assert(mixin('grid-template-rows: repeat(12, minmax(200px, 1fr))'), [
+    equal(mixin('grid-template-rows: repeat(12, minmax(200px, 1fr))'), [
       ['-ms-grid-rows:', ';grid-template-rows:', ';'],
       '(minmax(200px 500px))[12]',
       'repeat(12, minmax(200px, 1fr))'
@@ -199,7 +199,7 @@ describe('grid-template-rows', function () {
 
 describe('align-self', function () {
   it('should return correct value', function () {
-    assert(
+    equal(
       mixin('align-self: center'),
       [
         ['-ms-grid-row-align:', ';align-self', ';'],
@@ -212,7 +212,7 @@ describe('align-self', function () {
 
 describe('justify-self', function () {
   it('should return correct value', function () {
-    assert(
+    equal(
       mixin('justify-self: center'),
       [
         ['-ms-grid-column-align:', ';align-self', ';'],
@@ -225,7 +225,7 @@ describe('justify-self', function () {
 
 describe('mixin.all', function () {
   it('should support multiple rules', function () {
-    assert(
+    equal(
       mixin.all([
         'display: grid',
         'grid-template-columns: 1fr 2fr'
