@@ -31,16 +31,16 @@ const MyComponent = styled.div`
 
 Example expressions:
 
-'display: grid'
+`display: grid`
 
-'grid-column: 1 / 2'
+`grid-column: 1 / 2`
 
-'grid-row: 1 / 2'
+`grid-row: 1 / 2`
 
-'grid-template-columns: 1fr 2fr'
+`grid-template-columns: 1fr 2fr`
 
-'grid-template-columns: repeat(12, minmax(240px, 1fr))'
+`grid-template-columns: repeat(12, minmax(240px, 1fr))`
 
-'grid-template-rows: 1fr 2fr'
+`grid-template-rows: 1fr 2fr`
 
-'grid-template-columns: repeat(3, 1fr)'
+`grid-template-columns: repeat(3, 1fr)`
