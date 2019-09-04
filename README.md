@@ -44,3 +44,16 @@ Example expressions:
 `grid-template-rows: 1fr 2fr`
 
 `grid-template-columns: repeat(3, 1fr)`
+
+
+**Declare multiple rules at once**
+
+If you want to, you can delare multiple rules inside an array by calling `mixin.all`.
+
+```js
+const MyComponent = styled.div`
+  ${theme.grid.all([
+    'display: grid',
+    'grid-template-columns: 1fr 2fr'
+  ])}
+`

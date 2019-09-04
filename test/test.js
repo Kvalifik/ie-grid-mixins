@@ -223,6 +223,26 @@ describe('justify-self', function () {
   })
 })
 
+describe('mixin.all', function () {
+  it('should support multiple rules', function () {
+    assert(
+      mixin.all([
+        'display: grid',
+        'grid-template-columns: 1fr 2fr'
+      ]),
+      [
+        ['', '', ''],
+        ['display:-ms-grid;display:grid;'],
+        [
+          '-ms-grid-columns:,;grid-template-columns:,;',
+          '1fr2fr',
+          '1fr2fr'
+        ]
+      ]
+    )
+  })
+})
+
 describe('misc', function () {
   it('should throw an exception on an invalid keyword', function () {
     assert.throws(function () {
