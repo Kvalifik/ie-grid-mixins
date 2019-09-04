@@ -32,7 +32,7 @@ function css () {
   return args
 }
 
-var mixin = require('../lib/index.js')(css)
+var mixin = require('..')(css)
 
 describe('display', function () {
   it('should return correct value on "display: static"', function () {
