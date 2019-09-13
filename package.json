@@ -2,12 +2,11 @@
   "name": "ie-grid-mixins",
   "version": "1.0.0",
   "description": "A collection of mixins to write IE compliant grid styling in Styled Components",
-  "main": "lib/index.js",
-  "directories": {
-    "lib": "lib"
-  },
+  "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "build": "babel src --out-file index.js",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -29,6 +28,8 @@
     "styled-components": "4.x"
   },
   "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
     "mocha": "^6.2.0"
   }
 }
